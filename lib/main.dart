@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Home Page'),
     );
   }
 }
@@ -107,17 +106,25 @@ class _MyHomePageState extends State<MyHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  contentWidget,
-                  const Gap(10),
-                  ColoredBox(color: Colors.limeAccent, child: quoteWidget),
-                  const Gap(10),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10),
+                    child: contentWidget,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: ColoredBox(
+                      color: Colors.limeAccent,
+                      child: quoteWidget,
+                    ),
+                  ),
                   ColoredBox(
                     color: Colors.black26,
                     child: SizedBox.fromSize(size: Size(width, 0.5)),
                   ),
-                  const Gap(10),
-                  translateWidget,
-                  const Gap(10),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10),
+                    child: translateWidget,
+                  ),
                 ],
               ),
             ),

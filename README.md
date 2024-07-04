@@ -1,5 +1,7 @@
 # flutter_rich_text_text_painter
 
+[Related issue](https://github.com/flutter/flutter/issues/151301)
+
 When using `TextPainter` to measure the width of `RichText`, setting `textWidthBasis` in `TextPainter` to `TextWidthBasis.longestLine` does not take effect.
 
 ## Requirements
